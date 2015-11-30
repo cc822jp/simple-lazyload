@@ -30,9 +30,9 @@
 
     /**
      * add event listener
-     * @param elm
-     * @param event
-     * @param fn
+     * @param el target Element
+     * @param event target Event
+     * @param fn function
      */
     function addEvent(el, event, fn) {
         try {
@@ -44,8 +44,9 @@
         }
     }
 
-    // set onload event
+    // set load event
     addEvent(window, 'load', function() {
+        // after other scripts on load event
         setTimeout(loadImage, 1);
     });
 

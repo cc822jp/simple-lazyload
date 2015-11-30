@@ -11,28 +11,26 @@
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 	<style>
-		.panel-body > div {
-			width: 345px;
-			height: 206px;
-			background-size: 100%;
-		}
+		.panel-body > div {background-size: 100%;}
 	</style>
 </head>
 <body>
 <nav class="navbar navbar-default navbar-static-top">
 	<div class="container">
 		<div class="navbar-header">
-			<span class="navbar-brand">Simple-lazyload</span>
+			<span class="navbar-brand">Simple-lazyload Demo</span>
 		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="https://github.com/cc822jp/simple-lazyload">GitHub</a></li>
+		</ul>
 	</div>
 </nav>
 <div class="container">
-	<div class="jumbotron">
-		<h1>Simple-lazyload</h1>
-		<p>simple-lazyload is a image lazy loading javascript library at immediate execution.</p>
-		<p><a class="btn btn-primary btn-lg" href="https://github.com/cc822jp/simple-lazyload" role="button">Go To GitHub</a></p>
-	</div>
-	<h2>Set data-lazy-src attribute.</h2>
+	<h2>1. Set image src.</h2>
+	<figure class="highlight"><pre><code class="language-bash" data-lang="html">&lt;img <strong>data-lazy-src="assets/images/01.jpg"</strong>&gt;</code></pre></figure>
+	<h4>after load event</h4>
+	<figure class="highlight"><pre><code class="language-bash" data-lang="html">&lt;img <strong>src="assets/images/01.jpg"</strong>&gt;</code></pre></figure>
+
 	<div class="row">
 		<div class="col-xs-6 col-lg-4 panel-body"><img data-lazy-src="assets/images/01.jpg" width="100%"></div>
 		<div class="col-xs-6 col-lg-4 panel-body"><img data-lazy-src="assets/images/02.jpg" width="100%"></div>
@@ -41,14 +39,19 @@
 		<div class="col-xs-6 col-lg-4 panel-body"><img data-lazy-src="assets/images/05.jpg" width="100%"></div>
 		<div class="col-xs-6 col-lg-4 panel-body"><img data-lazy-src="assets/images/06.jpg" width="100%"></div>
 	</div>
-	<h2>Set src attribute.</h2>
+
+	<h2>2. Set background-image url.</h2>
+	<figure class="highlight"><pre><code class="language-bash" data-lang="html">&lt;div <strong>data-lazy-bg="assets/images/01.jpg"</strong>&gt;&lt;/div&gt;</code></pre></figure>
+	<h4>after load event</h4>
+	<figure class="highlight"><pre><code class="language-bash" data-lang="html">&lt;div <strong>style="background-image: url(assets/images/01.jpg);"</strong>&gt;&lt;/div&gt;</code></pre></figure>
+
 	<div class="row">
-		<div class="col-xs-6 col-lg-4 panel-body"><div data-lazy-bg="assets/images/07.jpg"></div></div>
-		<div class="col-xs-6 col-lg-4 panel-body"><div data-lazy-bg="assets/images/08.jpg"></div></div>
-		<div class="col-xs-6 col-lg-4 panel-body"><div data-lazy-bg="assets/images/09.jpg"></div></div>
-		<div class="col-xs-6 col-lg-4 panel-body"><div data-lazy-bg="assets/images/10.jpg"></div></div>
-		<div class="col-xs-6 col-lg-4 panel-body"><div data-lazy-bg="assets/images/11.jpg"></div></div>
-		<div class="col-xs-6 col-lg-4 panel-body"><div data-lazy-bg="assets/images/12.jpg"></div></div>
+		<div class="col-xs-6 col-lg-4 panel-body"><div data-lazy-bg="assets/images/07.jpg"><img src="assets/images/spacer.png" width="100%"></div></div>
+		<div class="col-xs-6 col-lg-4 panel-body"><div data-lazy-bg="assets/images/08.jpg"><img src="assets/images/spacer.png" width="100%"></div></div>
+		<div class="col-xs-6 col-lg-4 panel-body"><div data-lazy-bg="assets/images/09.jpg"><img src="assets/images/spacer.png" width="100%"></div></div>
+		<div class="col-xs-6 col-lg-4 panel-body"><div data-lazy-bg="assets/images/10.jpg"><img src="assets/images/spacer.png" width="100%"></div></div>
+		<div class="col-xs-6 col-lg-4 panel-body"><div data-lazy-bg="assets/images/11.jpg"><img src="assets/images/spacer.png" width="100%"></div></div>
+		<div class="col-xs-6 col-lg-4 panel-body"><div data-lazy-bg="assets/images/12.jpg"><img src="assets/images/spacer.png" width="100%"></div></div>
 	</div>
 </div>
 <footer class="footer">
